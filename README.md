@@ -21,9 +21,9 @@ clonar proyecto
 Abrir proyecto con el IDE de preferencia y configurar las credenciales de bases de datos en el archivo applicatioon-local.properties
 
 Los ENDPOINT disponibles son:
-http://localhost:8080/nttdata/v1/clientes
-http://localhost:8080/nttdata/v1/cuentas
-http://localhost:8080/nttdata/v1/movimientos
+* http://localhost:8080/nttdata/v1/clientes
+* http://localhost:8080/nttdata/v1/cuentas
+* http://localhost:8080/nttdata/v1/movimientos
 
 ## Archivo de base de datos
 Las tablas que se utilizan para el proyecto se encuentran en `resources/db.migration/V1.1__create_table.sql`
@@ -44,7 +44,7 @@ Si se desea ejeuctar de manera local se debe modificar el archivo `docker-compos
 ![compose](https://raw.githubusercontent.com/ismaelviss/NttData/master/stuff/14.png)
 
 ## Postman
-Se deje cargada la coleccion de Postman en stuff con el nombre `NttData.postman_collection.json`
+Se deje cargada la coleccion de Postman en stuff con el nombre `NttData.postman_collection.json` [PostmanCollection](https://raw.githubusercontent.com/ismaelviss/NttData/master/stuff/NttData.postman_collection.json)
 ![postman](https://raw.githubusercontent.com/ismaelviss/NttData/master/stuff/15.png)
 
 #Imagenes del proyecto
