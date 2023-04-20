@@ -5,7 +5,6 @@ plugins {
 }
 
 group = 'com.ismaelviss'
-version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
 
 configurations {
@@ -36,8 +35,8 @@ dependencies {
     implementation 'io.springfox:springfox-swagger-ui:2.9.2'
 
     implementation 'org.springframework.boot:spring-boot-starter-validation'
-    implementation 'javax.validation:validation-api:1.0.0.GA'
 
+    testImplementation 'org.mockito:mockito-core:4.11.0'
 
 }
 

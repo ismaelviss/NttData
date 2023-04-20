@@ -31,7 +31,7 @@ public class ClientController implements ClientApi {
     }
 
     @Override
-    public ResponseEntity<List<Client>> getAllClients() {
+    public ResponseEntity<List<Client>> getAllClients() throws ApplicationException {
         return new ResponseEntity<>(clientServicePort.getAll(), HttpStatus.OK);
     }
 

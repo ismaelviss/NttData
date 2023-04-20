@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 @ControllerAdvice
 public class ApplicationExceptionHandler {
@@ -38,16 +39,11 @@ public class ApplicationExceptionHandler {
         return new ResponseEntity<ErrorResponse>(errorResponse, HttpStatus.CONFLICT);
     }
 
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public Map<String, String> handleValidationExceptions(
-            MethodArgumentNotValidException ex) {
-        Map<String, String> errors = new HashMap<>();
-        ex.getBindingResult().getAllErrors().forEach((error) -> {
-            String fieldName = ((FieldError) error).getField();
-            String errorMessage = error.getDefaultMessage();
-            errors.put(fieldName, errorMessage);
-        });
-        return errors;
+    ResponseEntity<ErrorResponse> handleValidationExceptions(MethodArgumentNotValidException ex) {
+        var errorResponse = new ErrorResponse();
+        errorResponse.setCode("BAD_REQUEST");
+        errorResponse.setMessage(ex.getBindingResult().getFieldErrors().stream().map( it -> it.getField() + "->" + it.getDefaultMessage()).collect(Collectors.joining(",")));
+        return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
     }
 }

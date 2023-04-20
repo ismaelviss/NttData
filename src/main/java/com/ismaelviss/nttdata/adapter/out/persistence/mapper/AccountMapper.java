@@ -18,5 +18,8 @@ public abstract class AccountMapper {
     public abstract Account toAccount(AccountEntity accountEntity);
 
     @InheritInverseConfiguration
+    @Mappings({
+            @Mapping(target = "movementEntities", ignore = true)
+    })
     public abstract AccountEntity toAccountEntity(Account account);
 }

@@ -41,7 +41,7 @@ public class AccountController {
     @RequestMapping(
             produces = { "application/json" },
             method = RequestMethod.GET)
-    public ResponseEntity<List<Account>> getAllAccount() {
+    public ResponseEntity<List<Account>> getAllAccount() throws ApplicationException {
         return new ResponseEntity<>(accountServicePort.getAll(), HttpStatus.OK);
     }
 

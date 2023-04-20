@@ -34,8 +34,12 @@ public class AccountService implements AccountServicePort, ReportServicePort {
     }
 
     @Override
-    public List<Account> getAll() {
-        return accountPort.getAll();
+    public List<Account> getAll() throws ApplicationException {
+        var accounts = accountPort.getAll();
+        if (accounts.isEmpty())
+            throw new ApplicationException("NOT_FOUND_ACCOUNT", "cuenta no existe");
+
+        return accounts;
     }
 
     @Override

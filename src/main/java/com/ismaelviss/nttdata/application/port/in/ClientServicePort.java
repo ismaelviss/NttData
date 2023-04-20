@@ -8,7 +8,7 @@ import java.util.List;
 public interface ClientServicePort {
 
     Client get(Long id) throws ApplicationException;
-    List<Client> getAll();
+    List<Client> getAll() throws ApplicationException;
 
     void update(Client client) throws ApplicationException;
     void delete(Long id) throws ApplicationException;

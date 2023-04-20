@@ -22,8 +22,12 @@ public class ClientService implements ClientServicePort {
     }
 
     @Override
-    public List<Client> getAll() {
-        return clientPort.getAll();
+    public List<Client> getAll() throws ApplicationException {
+        var clients = clientPort.getAll();
+        if (clients.isEmpty())
+            throw new ApplicationException("NOT_FOUND_CLIENT", "cliente no existe");
+
+        return clients;
     }
 
     @Override

@@ -1,0 +1,709 @@
+{
+	"info": {
+		"_postman_id": "52f5e71a-1e1e-4ae2-8fe9-30abc613a387",
+		"name": "NttData",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1830604"
+	},
+	"item": [
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "get client",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/nttdata/v1/clientes/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"nttdata",
+								"v1",
+								"clientes",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get client",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/nttdata/v1/clientes/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"nttdata",
+										"v1",
+										"clientes",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"clientId\": 1,\n    \"name\": \"Elvis Salvatierra Espinoza\",\n    \"address\": \"Urbanizacion\",\n    \"phoneNumber\": \"+593999888777\",\n    \"password\": \"1234\",\n    \"state\": true,\n    \"gender\": \"Femenino\",\n    \"age\": 29,\n    \"identification\": \"0950518928\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get all clients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/nttdata/v1/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"nttdata",
+								"v1",
+								"clientes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all clients",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/nttdata/v1/clientes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"nttdata",
+										"v1",
+										"clientes"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "[\n    {\n        \"clientId\": 1,\n        \"name\": \"Elvis Salvatierra Espinoza\",\n        \"address\": \"Urbanizacion\",\n        \"phoneNumber\": \"+593999888777\",\n        \"password\": \"1234\",\n        \"state\": true,\n        \"gender\": \"Femenino\",\n        \"age\": 29,\n        \"identification\": \"0950518928\"\n    },\n    {\n        \"clientId\": 3,\n        \"name\": \"Elvis Salvatierra\",\n        \"address\": \"Urbanizacion\",\n        \"phoneNumber\": \"+593999888777\",\n        \"password\": \"1234\",\n        \"state\": true,\n        \"gender\": \"Femenino\",\n        \"age\": 29,\n        \"identification\": \"0950518930\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "delete client",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/nttdata/v1/clientes/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"nttdata",
+								"v1",
+								"clientes",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create client",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Elvis Salvatierra\",\n    \"gender\": \"Femenino\",\n    \"age\": 29,\n    \"identification\": \"0950518928\",\n    \"address\": \"Urbanizacion\",\n    \"phoneNumber\": \"+593999888777\",\n    \"password\": \"1234\",\n    \"state\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/nttdata/v1/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"nttdata",
+								"v1",
+								"clientes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create client",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Elvis Salvatierra\",\n    \"gender\": \"Masculino\",\n    \"age\": 29,\n    \"identification\": \"095051892\",\n    \"address\": \"Urbanizacion\",\n    \"phoneNumber\": \"+593999888777\",\n    \"password\": \"1234\",\n    \"state\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/nttdata/v1/clientes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"nttdata",
+										"v1",
+										"clientes"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"clientId\": 1,\n    \"name\": \"Elvis Salvatierra\",\n    \"address\": \"Urbanizacion\",\n    \"phoneNumber\": \"+593999888777\",\n    \"password\": \"1234\",\n    \"state\": true,\n    \"gender\": \"Masculino\",\n    \"age\": 29,\n    \"identification\": \"095051892\"\n}"
+						}
+					]
+				},
+				{
+					"name": "update client",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"clientId\": 1,\n    \"name\": \"Elvis Salvatierra Espinoza\",\n    \"address\": \"Urbanizacion\",\n    \"phoneNumber\": \"+593999888777\",\n    \"password\": \"1234\",\n    \"state\": true,\n    \"gender\": \"Femenino\",\n    \"age\": 29,\n    \"identification\": \"0950518928\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/nttdata/v1/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"nttdata",
+								"v1",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "add  account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"accountNumber\": \"2\",\n    \"accountType\": \"Ahorros\",\n    \"initialBalance\": 5000,\n    \"state\": true,\n    \"clientId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/nttdata/v1/cuentas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"nttdata",
+								"v1",
+								"cuentas"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "add  account",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"accountNumber\": \"2\",\n    \"accountType\": \"Ahorros\",\n    \"initialBalance\": 5000,\n    \"state\": true,\n    \"clientId\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/nttdata/v1/cuentas",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"nttdata",
+										"v1",
+										"cuentas"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"accountNumber\": \"2\",\n    \"accountType\": \"Ahorros\",\n    \"initialBalance\": 5000.0,\n    \"state\": true,\n    \"clientId\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "update account",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"accountNumber\": \"1\",\n    \"accountType\": \"Ahorros\",\n    \"initialBalance\": 10000,\n    \"state\": true,\n    \"clientId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/nttdata/v1/cuentas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"nttdata",
+								"v1",
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all  account",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/nttdata/v1/cuentas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"nttdata",
+								"v1",
+								"cuentas"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all  account",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/nttdata/v1/cuentas",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"nttdata",
+										"v1",
+										"cuentas"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "[\n    {\n        \"accountNumber\": \"2\",\n        \"accountType\": \"Ahorros\",\n        \"initialBalance\": 5000.0,\n        \"state\": true,\n        \"clientId\": 1\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "get account",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/nttdata/v1/cuentas/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"nttdata",
+								"v1",
+								"cuentas",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get account",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/nttdata/v1/cuentas/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"nttdata",
+										"v1",
+										"cuentas",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"accountNumber\": \"1\",\n    \"accountType\": \"Ahorros\",\n    \"initialBalance\": 10000.0,\n    \"state\": true,\n    \"clientId\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "delete account",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/nttdata/v1/cuentas/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"nttdata",
+								"v1",
+								"cuentas",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "estado de cuenta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/nttdata/v1/cuentas/reportes/:accountNumber?start_date=2023-04-18&end_date=2023-04-20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"nttdata",
+								"v1",
+								"cuentas",
+								"reportes",
+								":accountNumber"
+							],
+							"query": [
+								{
+									"key": "start_date",
+									"value": "2023-04-18"
+								},
+								{
+									"key": "end_date",
+									"value": "2023-04-20"
+								}
+							],
+							"variable": [
+								{
+									"key": "accountNumber",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "estado de cuenta",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/nttdata/v1/cuentas/reportes/:accountNumber?start_date=2023-04-19&end_date=2023-04-19",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"nttdata",
+										"v1",
+										"cuentas",
+										"reportes",
+										":accountNumber"
+									],
+									"query": [
+										{
+											"key": "start_date",
+											"value": "2023-04-19"
+										},
+										{
+											"key": "end_date",
+											"value": "2023-04-19"
+										}
+									],
+									"variable": [
+										{
+											"key": "accountNumber",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "[\n    {\n        \"date\": \"2023-04-20T06:58:46.998484\",\n        \"client\": \"Elvis Salvatierra Espinoza\",\n        \"accountNumber\": \"1\",\n        \"accountType\": \"Ahorros\",\n        \"initialBalance\": 10000.0,\n        \"state\": true,\n        \"amountMovement\": 10.0,\n        \"availableBalance\": 10010.0\n    },\n    {\n        \"date\": \"2023-04-20T06:59:03.198369\",\n        \"client\": \"Elvis Salvatierra Espinoza\",\n        \"accountNumber\": \"1\",\n        \"accountType\": \"Ahorros\",\n        \"initialBalance\": 10000.0,\n        \"state\": true,\n        \"amountMovement\": 10.0,\n        \"availableBalance\": 10020.0\n    },\n    {\n        \"date\": \"2023-04-20T06:59:16.954197\",\n        \"client\": \"Elvis Salvatierra Espinoza\",\n        \"accountNumber\": \"1\",\n        \"accountType\": \"Ahorros\",\n        \"initialBalance\": 10000.0,\n        \"state\": true,\n        \"amountMovement\": 10.0,\n        \"availableBalance\": 10030.0\n    },\n    {\n        \"date\": \"2023-04-20T06:59:18.042276\",\n        \"client\": \"Elvis Salvatierra Espinoza\",\n        \"accountNumber\": \"1\",\n        \"accountType\": \"Ahorros\",\n        \"initialBalance\": 10000.0,\n        \"state\": true,\n        \"amountMovement\": 10.0,\n        \"availableBalance\": 10040.0\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Movement",
+			"item": [
+				{
+					"name": "get all movement",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/nttdata/v1/movimientos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"nttdata",
+								"v1",
+								"movimientos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get movement",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/nttdata/v1/movimientos/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"nttdata",
+								"v1",
+								"movimientos",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add movement",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amount\": 10,\n    \"accountNumber\": \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/nttdata/v1/movimientos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"nttdata",
+								"v1",
+								"movimientos"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "add movement credit",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"amount\": 10,\n    \"accountNumber\": \"1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/nttdata/v1/movimientos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"nttdata",
+										"v1",
+										"movimientos"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"date\": \"2023-04-20T06:59:18.04227604\",\n    \"movementType\": \"Credito\",\n    \"amount\": 10.0,\n    \"balance\": 10040.0,\n    \"accountNumber\": \"1\"\n}"
+						},
+						{
+							"name": "add movement debit",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"amount\": -10,\n    \"accountNumber\": \"1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/nttdata/v1/movimientos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"nttdata",
+										"v1",
+										"movimientos"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"date\": \"2023-04-20T06:59:18.04227604\",\n    \"movementType\": \"Credito\",\n    \"amount\": 10.0,\n    \"balance\": 10040.0,\n    \"accountNumber\": \"1\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

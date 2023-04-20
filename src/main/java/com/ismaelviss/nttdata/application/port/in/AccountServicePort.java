@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface AccountServicePort {
     Account get(String id) throws ApplicationException;
-    List<Account> getAll();
+    List<Account> getAll() throws ApplicationException;
 
     void update(Account account) throws ApplicationException;
     void delete(String id) throws ApplicationException;
