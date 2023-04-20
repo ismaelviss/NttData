@@ -2,6 +2,7 @@ package com.ismaelviss.nttdata.adapter.out.persistence.adapter;
 
 import com.ismaelviss.nttdata.adapter.out.persistence.mapper.AccountMapper;
 import com.ismaelviss.nttdata.adapter.out.persistence.repository.AccountRepository;
+import com.ismaelviss.nttdata.adapter.out.persistence.repository.ClientRepository;
 import com.ismaelviss.nttdata.application.port.out.AccountPort;
 import com.ismaelviss.nttdata.common.PersistenceAdapter;
 import com.ismaelviss.nttdata.common.exception.ApplicationException;
@@ -13,9 +14,11 @@ import java.util.List;
 public class AccountPersistenceAdapter implements AccountPort {
 
     private final AccountRepository accountRepository;
+    private final ClientRepository clientRepository;
 
-    public AccountPersistenceAdapter(AccountRepository accountRepository) {
+    public AccountPersistenceAdapter(AccountRepository accountRepository, ClientRepository clientRepository) {
         this.accountRepository = accountRepository;
+        this.clientRepository = clientRepository;
     }
 
     @Override
@@ -62,7 +65,7 @@ public class AccountPersistenceAdapter implements AccountPort {
     }
 
     @Override
-    public Account add(Account account) {
+    public Account add(Account account) throws ApplicationException {
         return AccountMapper.INSTANCE.toAccount(accountRepository.save(AccountMapper.INSTANCE.toAccountEntity(account)));
     }
 }

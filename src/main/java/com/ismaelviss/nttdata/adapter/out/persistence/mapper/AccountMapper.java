@@ -11,6 +11,10 @@ import org.mapstruct.factory.Mappers;
 public abstract class AccountMapper {
 
     public static final AccountMapper INSTANCE = Mappers.getMapper(AccountMapper.class );
+
+    @Mappings({
+            @Mapping(source = "clientEntity.id", target = "clientId")
+    })
     public abstract Account toAccount(AccountEntity accountEntity);
 
     @InheritInverseConfiguration

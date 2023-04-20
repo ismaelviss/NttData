@@ -14,6 +14,7 @@ public class Movement {
     private String movementType;
     private Double amount;
     private Double balance;
+    private String accountNumber;
 
     public static final String DEBIT = "Debito";
     public static final String CREDIT = "Credito";

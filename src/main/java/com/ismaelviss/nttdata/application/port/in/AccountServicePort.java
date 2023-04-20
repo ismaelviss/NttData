@@ -12,5 +12,5 @@ public interface AccountServicePort {
 
     void update(Account account) throws ApplicationException;
     void delete(String id) throws ApplicationException;
-    Account add(Account account);
+    Account add(Account account) throws ApplicationException;
 }

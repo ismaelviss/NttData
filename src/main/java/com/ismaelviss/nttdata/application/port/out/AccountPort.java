@@ -15,5 +15,5 @@ public interface AccountPort {
 
     void delete(String id) throws ApplicationException;
 
-    Account add(Account account);
+    Account add(Account account) throws ApplicationException;
 }

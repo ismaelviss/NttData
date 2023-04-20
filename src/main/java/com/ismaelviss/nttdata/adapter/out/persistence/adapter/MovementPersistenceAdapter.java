@@ -7,6 +7,8 @@ import com.ismaelviss.nttdata.common.PersistenceAdapter;
 import com.ismaelviss.nttdata.common.exception.ApplicationException;
 import com.ismaelviss.nttdata.domain.Movement;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @PersistenceAdapter
@@ -65,5 +67,15 @@ public class MovementPersistenceAdapter implements MovementPort {
     @Override
     public Movement add(Movement movement) {
         return MovementMapper.INSTANCE.toMovement(movementRepository.save(MovementMapper.INSTANCE.toMovementEntity(movement)));
+    }
+
+    @Override
+    public Movement getLast(String accountNumber) {
+        return MovementMapper.INSTANCE.toMovement(movementRepository.findFirstByAccountEntity_AccountNumberOrderByDateDesc(accountNumber));
+    }
+
+    @Override
+    public List<Movement> getAllMovementAccount(String accountNumber, LocalDateTime startDate, LocalDateTime endDate) {
+        return movementRepository.findAllByAccountEntity_AccountNumberAndDateBetween(accountNumber, startDate, endDate).stream().map(MovementMapper.INSTANCE::toMovement).toList();
     }
 }
