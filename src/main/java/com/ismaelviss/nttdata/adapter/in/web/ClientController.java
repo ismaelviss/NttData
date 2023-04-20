@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @WebAdapter
 @RestController
 @Validated
@@ -26,6 +28,11 @@ public class ClientController implements ClientApi {
     @Override
     public ResponseEntity<Client> getClient(Long id) throws ApplicationException {
         return new ResponseEntity<>(clientServicePort.get(id), HttpStatus.OK);
+    }
+
+    @Override
+    public ResponseEntity<List<Client>> getAllClients() {
+        return new ResponseEntity<>(clientServicePort.getAll(), HttpStatus.OK);
     }
 
     @Override

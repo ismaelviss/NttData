@@ -5,6 +5,7 @@ import org.springframework.validation.annotation.Validated;
 
 import java.time.LocalDateTime;
 
+
 @Data
 @Validated
 public class Movement {
@@ -13,4 +14,7 @@ public class Movement {
     private String movementType;
     private Double amount;
     private Double balance;
+
+    public static final String DEBIT = "Debito";
+    public static final String CREDIT = "Credito";
 }

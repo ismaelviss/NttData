@@ -6,8 +6,6 @@ import com.ismaelviss.nttdata.application.port.out.AccountPort;
 import com.ismaelviss.nttdata.common.PersistenceAdapter;
 import com.ismaelviss.nttdata.common.exception.ApplicationException;
 import com.ismaelviss.nttdata.domain.Account;
-import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 

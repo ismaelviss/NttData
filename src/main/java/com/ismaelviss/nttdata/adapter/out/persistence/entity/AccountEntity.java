@@ -26,7 +26,7 @@ public class AccountEntity {
     private Boolean state;
 
     @ManyToOne
-    @JoinColumn(name="id", nullable = false)
+    @JoinColumn(name="client_id", nullable = false)
     private ClientEntity clientEntity;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "id")

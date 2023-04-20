@@ -23,6 +23,6 @@ public class MovementEntity {
     private Double balance;
 
     @ManyToOne
-    @JoinColumn(name="accountNumber", nullable = false)
+    @JoinColumn(name="account_number", nullable = false)
     private AccountEntity accountEntity;
 }

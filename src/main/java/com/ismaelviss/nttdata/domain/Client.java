@@ -36,4 +36,7 @@ public class Client {
     private String gender;
     private Integer age;
     private String identification;
+
+    public static final String MALE = "Masculino";
+    public static final String FEMALE = "Femenino";
 }

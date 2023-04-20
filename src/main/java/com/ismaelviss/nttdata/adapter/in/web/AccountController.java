@@ -12,6 +12,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @WebAdapter
 @RestController
 @Validated
@@ -30,6 +32,13 @@ public class AccountController {
             method = RequestMethod.GET)
     public ResponseEntity<Account> getAccount(@PathVariable String accountNumber) throws ApplicationException {
         return new ResponseEntity<>(accountServicePort.get(accountNumber), HttpStatus.OK);
+    }
+
+    @RequestMapping(
+            produces = { "application/json" },
+            method = RequestMethod.GET)
+    public ResponseEntity<List<Account>> getAllAccount() {
+        return new ResponseEntity<>(accountServicePort.getAll(), HttpStatus.OK);
     }
 
     @RequestMapping(

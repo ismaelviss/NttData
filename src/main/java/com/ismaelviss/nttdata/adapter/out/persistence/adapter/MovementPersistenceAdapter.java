@@ -3,11 +3,13 @@ package com.ismaelviss.nttdata.adapter.out.persistence.adapter;
 import com.ismaelviss.nttdata.adapter.out.persistence.mapper.MovementMapper;
 import com.ismaelviss.nttdata.adapter.out.persistence.repository.MovementRepository;
 import com.ismaelviss.nttdata.application.port.out.MovementPort;
+import com.ismaelviss.nttdata.common.PersistenceAdapter;
 import com.ismaelviss.nttdata.common.exception.ApplicationException;
 import com.ismaelviss.nttdata.domain.Movement;
 
 import java.util.List;
 
+@PersistenceAdapter
 public class MovementPersistenceAdapter implements MovementPort {
 
     private final MovementRepository movementRepository;

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @Validated
 @Api(tags = "Client")
@@ -25,6 +26,15 @@ public interface ClientApi {
             produces = { "application/json" },
             method = RequestMethod.GET)
     ResponseEntity<Client> getClient(@ApiParam(value = "ID of client",required=true) @PathVariable("id") Long id) throws ApplicationException;
+
+    @ApiOperation(value = "Consultar clientes", nickname = "getAllClients", notes = "", response = Client.class, tags={ "Client", })
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "successful operation", response = Client.class),
+            @ApiResponse(code = 404, message = "not found") })
+    @RequestMapping(value = "/clientes",
+            produces = { "application/json" },
+            method = RequestMethod.GET)
+    ResponseEntity<List<Client>> getAllClients() throws ApplicationException;
 
     @ApiOperation(value = "actualizar cliente", nickname = "updateClient", notes = "", response = Client.class, tags={ "Client", })
     @ApiResponses(value = {

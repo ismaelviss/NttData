@@ -1,7 +1,6 @@
 package com.ismaelviss.nttdata.application.port.out;
 
 import com.ismaelviss.nttdata.common.exception.ApplicationException;
-import com.ismaelviss.nttdata.domain.Client;
 import com.ismaelviss.nttdata.domain.Movement;
 
 import java.util.List;
