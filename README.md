@@ -28,15 +28,55 @@ http://localhost:8080/nttdata/v1/movimientos
 ## Archivo de base de datos
 Las tablas que se utilizan para el proyecto se encuentran en `resources/db.migration/V1.1__create_table.sql`
 Se esta utilizando flyway
+![tablas](https://raw.githubusercontent.com/ismaelviss/NttData/master/stuff/12.png)
 
 ## Para levantar el proyecto con Docker Compose
 El proyecto ya esta cargado en mi cuenta de Docker.hub
 solo se debe clonar el proyecto y ejecutar el siguiente comando:
 `docker-compose up -d`
 
+![docker](https://raw.githubusercontent.com/ismaelviss/NttData/master/stuff/13.png)
+
 Si se desea ejeuctar de manera local se debe modificar el archivo `docker-compose.yml` de la siguiente manera:
 1. comentar la linea 5
 2. descomentar la linea 4
 
+![compose](https://raw.githubusercontent.com/ismaelviss/NttData/master/stuff/14.png)
+
 ## Postman
 Se deje cargada la coleccion de Postman en stuff con el nombre `NttData.postman_collection.json`
+![postman](https://raw.githubusercontent.com/ismaelviss/NttData/master/stuff/15.png)
+
+#Imagenes del proyecto
+### creacion de client
+![1](https://raw.githubusercontent.com/ismaelviss/NttData/master/stuff/1.png)
+
+### consulta de todos los clientes
+![2](https://raw.githubusercontent.com/ismaelviss/NttData/master/stuff/2.png)
+
+### eliminacion de cliente
+![4](https://raw.githubusercontent.com/ismaelviss/NttData/master/stuff/4.png)
+
+### actualizacion de cliente
+![5](https://raw.githubusercontent.com/ismaelviss/NttData/master/stuff/5.png)
+
+### creacion de cuenta
+![6](https://raw.githubusercontent.com/ismaelviss/NttData/master/stuff/6.png)
+
+### actualizacion de cuenta
+![7](https://raw.githubusercontent.com/ismaelviss/NttData/master/stuff/7.png)
+
+### eliminacion de cuenta
+![8](https://raw.githubusercontent.com/ismaelviss/NttData/master/stuff/8.png)
+
+### creacion de movimiento credito
+![9](https://raw.githubusercontent.com/ismaelviss/NttData/master/stuff/9.png)
+
+### creacion de movimiento debito
+![10](https://raw.githubusercontent.com/ismaelviss/NttData/master/stuff/10.png)
+
+### consulta de estado de cuenta
+![11](https://raw.githubusercontent.com/ismaelviss/NttData/master/stuff/11.png)
+
+### Dashboard Docker
+![3](https://raw.githubusercontent.com/ismaelviss/NttData/master/stuff/3.png)
